@@ -1,0 +1,3 @@
+
+class InvalidHoldingError(ValueError):
+    pass
