@@ -8,3 +8,15 @@ wheels/
 
 # Virtual environments
 .venv
+.env
+
+# Tool caches
+.mypy_cache/
+.pytest_cache/
+.ruff_cache/
+.DS_Store
+
+# Local tools and personal notes (not part of the project)
+.serena/
+day_q/
+TIL.md

@@ -7,7 +7,9 @@ authors = [
     { name = "Q1-in-Dublin", email = "changeurself93@gmail.com" }
 ]
 requires-python = ">=3.12"
-dependencies = []
+dependencies = [
+    "pydantic-settings>=2.16.3",
+]
 
 [project.scripts]
 doc-pipeline-api = "doc_pipeline_api:main"
@@ -22,4 +24,5 @@ packages = ["src/doc_pipeline_api"]
 [dependency-groups]
 dev = [
     "mypy>=2.4.1",
+    "pytest>=9.2.0",
 ]
