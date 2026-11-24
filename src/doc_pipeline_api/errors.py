@@ -1,3 +1,2 @@
-
 class InvalidHoldingError(ValueError):
     pass

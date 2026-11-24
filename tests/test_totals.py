@@ -11,6 +11,7 @@ def make_csv(tmp_path):
         path = tmp_path / "holdings.csv"
         path.write_text(HEADER + "".join(row + "\n" for row in rows))
         return path
+
     return _make
 
 

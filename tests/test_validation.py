@@ -1,7 +1,10 @@
 import pytest
+
 from doc_pipeline_api.validation import is_valid_isin
 
-@pytest.mark.parametrize(    "isin",
+
+@pytest.mark.parametrize(
+    "isin",
     [
         "US0378331005",
         "US5949181045",
@@ -17,6 +20,7 @@ from doc_pipeline_api.validation import is_valid_isin
 )
 def test_valid_isins(isin):
     assert is_valid_isin(isin)
+
 
 @pytest.mark.parametrize(
     "isin",
