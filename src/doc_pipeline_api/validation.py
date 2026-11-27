@@ -18,3 +18,11 @@ def is_valid_isin(isin: str) -> bool:
                 n -= 9
         total += n
     return total % 10 == 0
+
+
+def make_isin(base11: str) -> str:
+    for d in "0123456789":
+        candidate = base11 + d
+        if is_valid_isin(candidate):
+            return candidate
+    raise ValueError(f"no check digit found for {base11!r}")

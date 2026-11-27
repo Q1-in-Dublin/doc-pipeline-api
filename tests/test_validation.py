@@ -1,6 +1,6 @@
 import pytest
 
-from doc_pipeline_api.validation import is_valid_isin
+from doc_pipeline_api.validation import is_valid_isin, make_isin
 
 
 @pytest.mark.parametrize(
@@ -56,3 +56,9 @@ def test_invalid_isins(isin):
 
 # def test_lowercase_is_invalid():
 #     assert not is_valid_isin("us0378331005")
+@pytest.mark.parametrize(
+    ("base11", "expected"),
+    [("US037833100", "US0378331005"), ("IE00B4L5Y98", "IE00B4L5Y983")],
+)
+def test_make_isin_adds_correct_check_digit(base11, expected):
+    assert make_isin(base11) == expected

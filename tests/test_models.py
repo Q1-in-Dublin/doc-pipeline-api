@@ -62,7 +62,6 @@ def test_quantity_with_thousands_separator_raises():
         Holding.from_row(make_row(quantity="100,000"))
 
 
-@pytest.mark.xfail(reason="TODO: from_row should reject nan/inf")
 @pytest.mark.parametrize("bad", ["nan", "inf"])
 def test_nan_quantity_raises(bad):
     with pytest.raises(InvalidHoldingError):
